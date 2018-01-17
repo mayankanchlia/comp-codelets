@@ -1,0 +1,80 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main(){
+    int n,m,k,w=0,e=0;
+    cin >>n>>m>>k ;
+    m = m-1;
+    int min_costright,min_costleft,min_cost;
+    int a[n];
+    for (int i =0;i<n;i++){
+    	cin>> a[i];
+    	if(a[i]!=0)	a[i]=k-a[i];
+    	else a[i]=-10000;
+    }
+    for(w=m;w<n;++w){
+    	if(a[w]>=0){
+    	 min_costright = w-m; 
+    	 break;
+    	}	
+    }
+    
+    for(e=m-1;e>=0;--e){
+    	if(a[e]>=0){
+    		min_costleft = m-e;
+    		break;
+    	}
+    }
+  //  cout <<w;
+    if(e==-1) e = -1000000;
+  if (w==n) w = 1000000;
+	if(m+1!=1 && m+1!=n) cout << min(10*(w-m),10*(m-e));
+	else if(m+1==1) cout<<10*(w-m);
+	else if(m+1==n) cout << 10*(m-e);
+
+
+
+  //  cout << "m"<<m<<endl;
+//     for (w = m;w<n;w++){
+//     	if(a[w]!=0){
+//     	if(a[w]<=k){
+//     		min_costright = a[w]; 
+//     		break;
+//     	}
+//     }
+
+//     }
+//  //  cout<<"w"<<w-m+1<<endl;
+//     if(m>1){
+//     for(e = m-2;e>=0;--e){
+//     	if(a[e]!=0){
+//     	if(a[e]<k){
+//     		min_costleft = a[e];
+//     		break;
+//     	}
+//     }
+//     }
+//     if(e<0){
+//     	e=-100000;
+//     }
+// }
+//    // cout<<"e1"<<m-e+1<<endl;
+//     if(m>1){
+//     	if(m-e-1<w-m+1){
+//     		cout<<10*(m-e-1);
+//     	}
+//     	else cout<<10*(w-m+1);
+//     }
+//     else cout<<10*(w-m+1);
+//  //  cout<<"e"<<m-e<<"w"<<w-m<<endl;
+    
+//    // cout<<min_cost;
+ 
+ 
+    return 0;
+}
