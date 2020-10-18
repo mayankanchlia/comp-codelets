@@ -38,7 +38,7 @@ int main(int argc, char ** argv){
 	insert(node1,5);
 	insert(node1,6);
 	insert(node1,10);
-	
+	w
 	cout << endl;
 	while(node1){
 		if(node1->childen[0]){
