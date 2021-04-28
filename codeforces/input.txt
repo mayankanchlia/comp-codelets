@@ -1,9 +1,7 @@
-8
-adsasda
-asdasdsa
-daasdas
-adsdasd
-asd
-adsada
-asdsa
-das
+3
+7
+4 2 0 1 3 3 7
+5
+2 2 8 6 9
+1
+0
