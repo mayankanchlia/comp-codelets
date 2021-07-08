@@ -35,6 +35,7 @@ int knap_dp_unbounded(){
 			 	cout << endl;
 	return dp[weig_sum];
 }
+
 int main (int argc, char ** argv){
 	int t ;cin >> t;
 	while(t--){
